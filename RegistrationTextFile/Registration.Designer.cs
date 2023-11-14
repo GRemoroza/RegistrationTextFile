@@ -48,10 +48,11 @@
             this.cbProgram = new System.Windows.Forms.ComboBox();
             this.cbGender = new System.Windows.Forms.ComboBox();
             this.btnRegister = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnRecord = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -233,11 +234,33 @@
             this.btnRegister.Font = new System.Drawing.Font("Noto Sans Arabic UI", 8.999999F);
             this.btnRegister.Location = new System.Drawing.Point(177, 324);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(664, 41);
+            this.btnRegister.Size = new System.Drawing.Size(275, 41);
             this.btnRegister.TabIndex = 19;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // btnRecord
+            // 
+            this.btnRecord.BackColor = System.Drawing.Color.Teal;
+            this.btnRecord.Font = new System.Drawing.Font("Noto Sans Arabic UI", 8.999999F);
+            this.btnRecord.Location = new System.Drawing.Point(671, 324);
+            this.btnRecord.Name = "btnRecord";
+            this.btnRecord.Size = new System.Drawing.Size(179, 41);
+            this.btnRecord.TabIndex = 22;
+            this.btnRecord.Text = "Records";
+            this.btnRecord.UseVisualStyleBackColor = false;
+            this.btnRecord.Click += new System.EventHandler(this.btnRecord_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::RegistrationTextFile.Properties.Resources.school_registration;
+            this.pictureBox2.Location = new System.Drawing.Point(856, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(379, 423);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -250,16 +273,6 @@
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::RegistrationTextFile.Properties.Resources.school_registration;
-            this.pictureBox2.Location = new System.Drawing.Point(856, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(379, 423);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 21;
-            this.pictureBox2.TabStop = false;
-            // 
             // Registration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -267,6 +280,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1241, 437);
+            this.Controls.Add(this.btnRecord);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnRegister);
@@ -291,8 +305,9 @@
             this.Controls.Add(this.label1);
             this.Name = "Registration";
             this.Text = "FrmRegistration";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.Registration_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,6 +337,7 @@
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnRecord;
     }
 }
 
