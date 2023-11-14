@@ -75,5 +75,19 @@ namespace RegistrationTextFile
             }
             MessageBox.Show("Registration successful!");
         }
+
+        private void btnRecord_Click(object sender, EventArgs e)
+        {
+            StudentRecord frmStudentRecord = new StudentRecord();
+
+            
+            frmStudentRecord.Show();
+
+        }
+
+        private void Registration_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
